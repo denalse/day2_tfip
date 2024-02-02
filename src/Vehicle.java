@@ -1,9 +1,9 @@
 
-public class Vehicle {
+public class Vehicle implements Directions {
     private String color;
     private int capacity;
     private String licensePlate;
-    private String year;
+    private int year;
     private String model;
     private String make;
     private Boolean started;
@@ -13,7 +13,7 @@ public class Vehicle {
 
     }
 
-    public Vehicle(String color, int capacity, String licensePlate, String year, String model, String make) {
+    public Vehicle(String color, int capacity, String licensePlate, int year, String model, String make) {
         this.color = color;
         this.capacity = capacity;
         this.licensePlate = licensePlate;
@@ -46,11 +46,11 @@ public class Vehicle {
         this.licensePlate = licensePlate;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
@@ -103,6 +103,30 @@ public class Vehicle {
 
     public void stopSwiped() {
         this.wiperSwiped = false;
+    }
+
+    @Override
+    public void forward() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'forward'");
+    }
+
+    @Override
+    public void backward() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'backward'");
+    }
+
+    @Override
+    public void left() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'left'");
+    }
+
+    @Override
+    public void right() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'right'");
     }
 
 
