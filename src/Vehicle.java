@@ -107,26 +107,22 @@ public class Vehicle implements Directions {
 
     @Override
     public void forward() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'forward'");
+        System.out.println("Vehicle is moving forward.");
     }
 
     @Override
     public void backward() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'backward'");
+        System.out.println("Vehicle is moving backward.");
     }
 
     @Override
     public void left() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'left'");
+        System.out.println("Vehicle is moving left.");
     }
 
     @Override
     public void right() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'right'");
+        System.out.println("Vehicle is moving right.");    
     }
 
 

@@ -25,4 +25,24 @@ public class Car extends Vehicle {
         System.out.println("Tuuu.. Tuuu.. Tuuu..");
     }
 
+    @Override
+    public void forward() {
+        System.out.println("Car is moving forward.");
+    }
+
+    @Override
+    public void backward() {
+        System.out.println("Car is moving backward.");
+    }
+
+    @Override
+    public void left() {
+        System.out.println("Car is moving left.");
+    }
+
+    @Override
+    public void right() {
+        System.out.println("Car is moving right.");    
+    }
+
 }

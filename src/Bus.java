@@ -1,5 +1,5 @@
 
-public class Bus extends Vehicle{
+public class Bus extends Vehicle {
 
     private Boolean frontDoor;
     private Boolean backDoor;
@@ -16,13 +16,8 @@ public class Bus extends Vehicle{
         super(color, capacity, licensePlate, year, model, make);
         this.frontDoor = frontDoor;
         this.backDoor = backDoor;
-    }
-
-    public Bus(Boolean frontDoor, Boolean backDoor, Boolean frontDoorOpen, Boolean backDoorOpen) {
-        this.frontDoor = frontDoor;
-        this.backDoor = backDoor;
-        this.frontDoorOpen = frontDoorOpen;
-        this.backDoorOpen = backDoorOpen;
+        this.frontDoorOpen = false;
+        this.backDoorOpen = false;
     }
 
     public Boolean getFrontDoor() {
@@ -45,22 +40,44 @@ public class Bus extends Vehicle{
         return frontDoorOpen;
     }
 
-    public void setFrontDoorOpen(Boolean frontDoorOpen) {
-        this.frontDoorOpen = frontDoorOpen;
-    }
+    // public void setFrontDoorOpen(Boolean frontDoorOpen) {
+    //     this.frontDoorOpen = frontDoorOpen;
+    // }
 
-    public Boolean getBackfrontDoorOpen() {
+    public Boolean getBackDoorOpen() {
         return backDoorOpen;
     }
 
-    public void setBackfrontDoorOpen(Boolean backDoorOpen) {
-        this.backDoorOpen = backDoorOpen;
+    // public void setBackDoorOpen(Boolean backDoorOpen) {
+    //     this.backDoorOpen = backDoorOpen;
+    // }
+
+     // door: front, back
+     public void setDoorStatus(String door) {
+
+        if (door.toLowerCase().equals("front")) {
+            if (frontDoor) {
+                // either open or close the door
+                this.frontDoorOpen = !this.frontDoorOpen;
+            } else {
+                System.err.println("There is no " + door + " door.");
+            }
+        }
+
+        if (door.toLowerCase().equals("back")) {
+            if (backDoor) {
+                // either open or close the door
+                this.backDoorOpen = !this.backDoorOpen;
+            } else {
+                System.err.println("There is no " + door + " door.");
+            }
+        }
     }
 
     @Override
     public String toString() {
         return "Bus [frontDoor=" + frontDoor + ", backDoor=" + backDoor + ", frontDoorOpen=" + frontDoorOpen
-                + ", backfrontDoorOpen=" + backDoorOpen + "model= " + this.getModel() + "]";
+                + ", backDoorOpen=" + backDoorOpen + ",  model= " + this.getModel() + "]";
     }
 
     @Override
@@ -73,6 +90,24 @@ public class Bus extends Vehicle{
         System.out.println("Back Door: " + backDoor + ", Opened: " + backDoorOpen);
     }
 
-    
+    @Override
+    public void forward() {
+        System.out.println("Bus is moving forward.");
+    }
+
+    @Override
+    public void backward() {
+        System.out.println("Bus is moving backward.");
+    }
+
+    @Override
+    public void left() {
+        System.out.println("Bus is moving left.");
+    }
+
+    @Override
+    public void right() {
+        System.out.println("BusF is moving right.");
+    }
 
 }
