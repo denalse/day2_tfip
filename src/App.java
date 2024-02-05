@@ -34,5 +34,16 @@ public class App {
         for (Vehicle v : vehicles) {
             System.out.println(v.toString());
         }
+
+        Container<Vehicle> container = new Container<>();
+        container.addItem(schoolBus);
+        container.addItem(audi);
+        container.addItem(honda);
+
+        List<Vehicle> retrieveVehicles = container.getItems();
+        for(Vehicle vehicle: retrieveVehicles) {
+            System.out.println(vehicle.toString());
+        }
+        
     }
 }

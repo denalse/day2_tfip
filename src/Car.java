@@ -45,4 +45,12 @@ public class Car extends Vehicle {
         System.out.println("Car is moving right.");    
     }
 
+    @Override
+    public String toString() {
+        return "Car [color=" + this.getColor() + ", capacity=" + this.getCapacity() + ", licensePlateNo=" + this.getLicensePlate() + ", year="
+        + this.getYear() + ", model=" + this.getModel() + ", make=" + this.getMake() + ", bodyType=" + bodyType + "]";
+    }
+
+    
+
 }

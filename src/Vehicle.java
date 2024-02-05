@@ -70,19 +70,18 @@ public class Vehicle implements Directions {
         this.make = make;
     }
 
+    @Override
+    public String toString() {
+        return "Vehicle [color=" + color + ", capacity=" + capacity + ", licensePlate=" + licensePlate + ", year="
+                + year + ", model=" + model + ", make=" + make + "]";
+    }
+
     public Boolean getStarted() {
         return started;
     }
 
     public Boolean getWiperSwiped() {
         return wiperSwiped;
-    }
-    
-
-    @Override
-    public String toString() {
-        return "Vehicle [color=" + color + ", capacity=" + capacity + ", licensePlate=" + licensePlate + ", year="
-                + year + ", model=" + model + ", make=" + make + "]";
     }
 
     public void start() {
@@ -122,8 +121,7 @@ public class Vehicle implements Directions {
 
     @Override
     public void right() {
-        System.out.println("Vehicle is moving right.");    
+        System.out.println("Vehicle is moving right.");
     }
-
 
 }
